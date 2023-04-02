@@ -16,6 +16,7 @@ Step 5: Create .env file using Command : touch .env
 Step 6: Get Your Keys Visiting 
 <br>
 https://cloudinary.com/
+<br>
 https://openai.com/
 <br>
 Step 7: Open Terminal and run using Command          : npm run dev
