@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <style>
+      * {
+        box-sizing: border-box;
+      }
+
+      body {
+        margin: 0;
+        font-family: Arial, sans-serif;
+      }
+
+      header {
+        background-color: #333;
+        color: white;
+        padding: 1rem;
+      }
+
+      .navbar {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+      }
+
+      .logo h2 {
+        margin: 0;
+      }
+
+      main {
+        min-height: 100vh;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+      }
+
+      .showcase {
+        text-align: center;
+        margin-bottom: 2rem;
+      }
+
+      #image-form {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        width: 100%;
+        max-width: 500px;
+        margin: 0 auto;
+      }
+
+      #prompt {
+        width: 100%;
+        padding: 0.5rem;
+        margin-bottom: 1rem;
+        border: none;
+        border-bottom: 2px solid #333;
+        font-size: 1.2rem;
+      }
+
+      #size {
+        padding: 0.5rem;
+        margin-bottom: 1rem;
+        border: none;
+        border-radius: 0.25rem;
+        background-color: #f2f2f2;
+        font-size: 1.2rem;
+      }
+
+      .btn {
+        padding: 0.5rem 1rem;
+        border: none;
+        border-radius: 0.25rem;
+        background-color: #333;
+        color: white;
+        font-size: 1.2rem;
+        cursor: pointer;
+      }
+
+      .btn:hover {
+        background-color: #666;
+      }
+
+      .bn30 {
+        margin-left: 1rem;
+        padding: 0.5rem 1rem;
+        border: none;
+        border-radius: 0.25rem;
+        background-color: #333;
+        color: white;
+        font-size: 1.2rem;
+        cursor: pointer;
+      }
+
+      .bn30:hover {
+        background-color: #666;
+      }
+
+      .image-container {
+        text-align: center;
+      }
+
+      #image {
+        max-width: 100%;
+        margin-top: 2rem;
+      }
+
+      .spinner {
+        display: none;
+        width: 40px;
+        height: 40px;
+        margin: 0 auto;
+        border: 4px solid #f3f3f3;
+        border-top: 4px solid #3498db;
+        border-radius: 50%;
+        animation: spin 2s linear infinite;
+      }
+
+      @keyframes spin {
+        0% {
+          transform: rotate(0deg);
+        }
+        100% {
+          transform: rotate(360deg);
+        }
+      }
+    </style>
+
+    <script src="js/main.js" defer></script>
+    <title>Image Genrator-Assignment</title>
+  </head>
+  <body>
+    <header>
+      <div class="navbar">
+        <div class="logo">
+          <h2>Image Generator-Assignment</h2>
+        </div>
+    </header>
+
+    <main>
+      <section class="showcase">
+        <form id="image-form">
+          <h1>Describe An Image</h1>
+          <div class="form-control">
+            <input type="text" id="prompt" placeholder="Enter Text" />
+          </div>
+          <!-- size -->
+          <button type="submit" class="btn">Generate</button>
+          <br>
+          <button class="bn30">Download</button>
+        </form>
+      </section>
+
+      <section class="image">
+        <div class="image-container">
+          <h2 class="msg"></h2>
+          <img src="" alt="" id="image" />
+        </div>
+      </section>
+    </main>
+
+    <div class="spinner"></div>
+  </body>
+</html>
